@@ -1,0 +1,37 @@
+ <view wx:elif="{{ Djtype=='2'}}" class="content">
+         <view wx:if="{{item.state==0}}" class="complete">
+          <view class="main6"></view>
+           <text>已完成</text>
+         </view>
+
+         <view wx:elif="{{item.state==1}}" class="nocomplete">
+          <view class="main7"></view>
+           <text>已完成</text>
+         </view>
+
+         <view wx:else="{{item.state==2}}" class="hvcomplete">
+          <view class="main8"></view>
+           <text>部分发货</text>
+         </view>
+       </view>
+
+
+.hvcomplete{
+
+  display: flex;
+  justify-content: space-around;
+  height: 40rpx;
+  border-radius: 20rpx;
+  color :rgba(254, 191, 0, 1);
+  background-color:rgba(254, 191, 0, 0.15);;
+  width: 65px;
+  justify-content: center;
+  align-items: center;
+}
+.main8 {
+  width: 8rpx;
+  height: 8rpx;
+  background-color:rgba(254, 191, 0, 1);
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
